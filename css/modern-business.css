@@ -3,7 +3,13 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
  */
-@import "font-awesome";
+ eee
+
+@font-face {
+    font-family: 'carringtonregular';
+    src: url('html/fonts/carrington-webfont.woff2') format('woff2'),
+         url('html/fonts/carrington-webfont.woff') format('woff');s
+}
 
 body {
   padding-top: 54px;
@@ -16,25 +22,35 @@ body {
 }
 
 
-.carousel-item  {
-  height: 80vh;
+.carousel-item {
+  height: 75vh;
   min-height: 300px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
+  background-position: 85% 15%;
+}
 
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: visible;
 }
 
 .portfolio-item {
   margin-bottom: 30px;
 }
 
-.navbar-brand {
- font-family: 'carringtonregular';
+.navbar-brand  {
+ font-family: 'Dancing Script', cursive;
+ font-style: normal;
+ font-size: 30px;
+ color: #ffcc00;
 }
+
 
 .carousel-container{
   position: relative;
