@@ -3,6 +3,7 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
  */
+@import "font-awesome";
 
 body {
   padding-top: 54px;
@@ -16,19 +17,30 @@ body {
 
 
 .carousel-item  {
-  height: 65vh;
+  height: 80vh;
   min-height: 300px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-attachment: fixed;
   background-size: cover;
+
 }
 
 .portfolio-item {
   margin-bottom: 30px;
 }
 
-.navbar-brand a {
- font-family: 'Pacifico', cursive;
+.navbar-brand {
+ font-family: 'carringtonregular';
+}
+
+.carousel-container{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 25px;
+  border-width: auto;
 }
