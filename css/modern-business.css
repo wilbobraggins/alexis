@@ -87,11 +87,12 @@ a {
  font-style: normal;
 }
 
-.fab {
-  padding: 4px;
+.fab::before {
+  padding: 5px;
   background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
                 radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-  border-radius: 20px; 
+  border-radius: 50%;
+  color: #212529; 
 }
 
 .fab:hover {
@@ -158,9 +159,26 @@ border-radius: 10px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  
 }
 
 .breadcrumb {
   background-color: #f8c9ab;
+  padding-right: 13%;
+  padding-left: 12%;
+}
+
+#card2 {
+  min-height: 450px;
+  background-color: rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+li, a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jumbotron, h3 {
+  background-color: #f8c9ab;
+  color: #47a69d;
 }
