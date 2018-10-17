@@ -39,3 +39,11 @@ gulp.task('dev', ['browserSync'], function() {
   gulp.watch('./css/*.css', browserSync.reload);
   gulp.watch('./*.html', browserSync.reload);
 });
+
+gulp.task('serveprod', function() {
+  connect.server({
+    root: [index.html],
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
