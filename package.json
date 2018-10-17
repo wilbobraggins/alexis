@@ -40,6 +40,6 @@
   },
   
   "scripts": {
-    "start": "jqBootstrapValidation.js"
+    "start": "index.html"
 }
 }
