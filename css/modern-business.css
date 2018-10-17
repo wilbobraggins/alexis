@@ -114,8 +114,8 @@ a {
 }
 
 #bottom {
-background-color: rgba(0.5,0.5,0.5,0.75);
-color: #f8c9ab;
+background-color: rgba(111, 45, 20, 0.8);
+color: #b2c1c0;
 border-radius: 10px;
 }
 
@@ -178,7 +178,18 @@ li, a {
   margin-right: auto;
 }
 
-.jumbotron, h3 {
+.jumbotron {
   background-color: #f8c9ab;
   color: #47a69d;
+}
+
+label {
+  color: #f8c9ab;
+  font-size: 25px;
+}
+
+#contactForm {
+  background-color: rgba(0.5, 0.5, 0.5, 0.5);
+  border-radius: 5px;
+  color: #f8c9ab;
 }
