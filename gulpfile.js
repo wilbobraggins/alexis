@@ -40,10 +40,13 @@ gulp.task('dev', ['browserSync'], function() {
   gulp.watch('./*.html', browserSync.reload);
 });
 
-gulp.task('serveprod', function() {
-  connect.server({
-    root: [index.html],
-    port: process.env.PORT || 5000, // localhost:5000
-    livereload: false
+gulp.task('serve', function() {
+  browserSync({
+    server: {
+      baseDir: './'
+    },
+    port: process.env.PORT || 5000
   });
+
+  gulp.watch(['*.html', 'css/*.css', 'js/*.js', 'views/*.html', 'template/*.html', './*.html'], {cwd: 'app'}, reload);
 });
