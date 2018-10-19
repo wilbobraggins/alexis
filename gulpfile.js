@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var pkg = require('./package.json');
-
+var runSeq = require('run-sequence')
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
 
@@ -40,13 +40,8 @@ gulp.task('dev', ['browserSync'], function() {
   gulp.watch('./*.html', browserSync.reload);
 });
 
-gulp.task('serve', function() {
-  browserSync({
-    server: {
-      baseDir: './'
-    },
-    port: process.env.PORT || 5000
-  });
+gulp.task('heroku:production', function(){
+  runSeq('clean', 'build', 'minify')
+})
 
-  gulp.watch(['*.html', 'css/*.css', 'js/*.js', 'views/*.html', 'template/*.html', './*.html'], {cwd: 'app'}, reload);
-});
+
