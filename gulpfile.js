@@ -40,4 +40,21 @@ gulp.task('dev', ['browserSync'], function() {
   gulp.watch('./*.html', browserSync.reload);
 });
 
+// build task
+gulp.task('build', ['vendor'], function() {
+  var dist =  'dist'
+  var paths = [
+    "index.html",
+    "about.html",
+    "contact.html",
+    "hire.html",
+    "css/**/*",
+    "scss/**/*",
+    "img/**/*",
+    "js/**/*",
+    "vendor/**/*"
+  ]
+
+  gulp.src(paths, { base: '.' }).pipe(gulp.dest(dist))
+});
 
